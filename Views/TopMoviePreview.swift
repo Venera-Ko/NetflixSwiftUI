@@ -11,6 +11,18 @@ import KingfisherSwiftUI
 struct TopMoviePreview: View {
     var movie: Movie
     
+    func isCategoryLast(_ cat: String) -> Bool {
+        let catCount = movie.categories.count
+        
+        if let index = movie.categories.firstIndex(of: cat) {
+            if index + 1 != catCount {
+                return false
+            }
+        }
+        
+        return true
+    }
+    
     var body: some View {
         ZStack {
             KFImage(movie.thumbnailURL)
@@ -26,15 +38,41 @@ struct TopMoviePreview: View {
                     ForEach(movie.categories, id: \.self) { category in
                         HStack {
                             Text(category)
-                            Image(systemName: "circle.fill")
-                                .foregroundColor(.green)
-                                .font(.system(size: 5))
+                                .font(.footnote)
+                            
+                            if !isCategoryLast(category) {
+                                Image(systemName: "circle.fill")
+                                    .foregroundColor(.green)
+                                    .font(.system(size: 5))
+                            }
+                            
                         }
                     }
                 }
-                Text("Buttons")
+                
+                HStack {
+                    Spacer()
+                    
+                    SmallVerticalButton(text: "My List", isOffImage: "plus", isOnImage: "checkmark", isOn: false) {
+                        //
+                    }
+                    
+                    Spacer()
+                    
+                    PlayButtonView(text: "Play", imageName: "play.fill") {
+                        //
+                    }
+                    .frame(width: 140)
+                    
+                    Spacer()
+                    
+                    SmallVerticalButton(text: "Info", isOffImage: "info.circle", isOnImage: "info.circle", isOn: false) {
+                        //
+                    }
+                    
+                    Spacer()
+                }
             }
-            
         }
         .foregroundColor(.white)
     }
