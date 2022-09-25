@@ -62,7 +62,7 @@ struct TopMoviePreview: View {
                     PlayButtonView(text: "Play", imageName: "play.fill") {
                         //
                     }
-                    .frame(width: 140)
+                    .frame(width: 120)
                     
                     Spacer()
                     
@@ -73,6 +73,9 @@ struct TopMoviePreview: View {
                     Spacer()
                 }
             }
+            .background(LinearGradient.blackOpacityGradient
+                .padding(.top, 300))
+            
         }
         .foregroundColor(.white)
     }

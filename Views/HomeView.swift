@@ -1,8 +1,9 @@
 import SwiftUI
-import KingfisherSwiftUI
 
 struct HomeView: View {
     var vm = HomeVM()
+    
+    let screen = UIScreen.main.bounds
     
     var body: some View {
         ZStack {
@@ -11,10 +12,18 @@ struct HomeView: View {
             
             ScrollView(showsIndicators: false) {
                 LazyVStack {
+                    
+                    TopRowButtons()
+                    
+                    TopMoviePreview(movie: movieExample4)
+                        .frame(width: screen.width)
+                        .padding(.top, -120)
+                        .zIndex(-1)
+                    
                     ForEach(vm.allCategories, id: \.self) { category in
                         VStack {
                             HStack {
-                            Text(category)
+                                Text(category)
                                     .bold()
                                     .font(.title3)
                                 Spacer()
@@ -41,5 +50,49 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+    }
+}
+
+struct TopRowButtons: View {
+    var body: some View {
+        HStack {
+            Button {
+                //
+            } label: {
+                Image("LOGO")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 60)
+            }
+            
+            Spacer()
+            
+            Button {
+                //
+            } label: {
+                Text("TV Shows")
+                    .font(.callout)
+            }
+            
+            Spacer()
+            
+            Button {
+                //
+            } label: {
+                Text("Movies")
+                    .font(.callout)
+            }
+            
+            Spacer()
+            
+            Button {
+                //
+            } label: {
+                Text("My List")
+                    .font(.callout)
+            }
+        }
+        .padding(.leading, 5)
+        .padding(.trailing, 35)
     }
 }

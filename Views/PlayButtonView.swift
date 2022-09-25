@@ -26,7 +26,7 @@ struct PlayButtonView: View {
                 
                 Text(text)
                     .bold()
-                    .font(.system(size: 16))
+                    .font(.system(size: 17))
                 
                 Spacer()
             }
