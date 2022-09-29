@@ -42,7 +42,15 @@ struct MovieDetailView: View {
                                 .bold()
                                 .font(.headline)
                         }
+                        PlayButton(text: "Play", imageName: "plau.fill", backgroundColor: .red) {
+                            //
+                        }
+                        
+                        CurrentEpisodeInformation(movie: movie)
+                        
+                        CastInfo(movie: movie)
                     }
+                                        .padding(.horizontal, 2)
                 }
                 
                 Spacer()
@@ -54,7 +62,7 @@ struct MovieDetailView: View {
 
 struct MovieDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        MovieDetailView(movie: movieExample1)
+        MovieDetailView(movie: movieExample)
     }
 }
 
@@ -91,5 +99,51 @@ struct RatingView: View {
                 .font(.system(size: 13))
         }
         .frame(width: 50, height: 20)
+    }
+}
+
+struct CastInfo: View {
+    var movie: Movie
+    
+    var body: some View {
+        VStack(spacing: 3) {
+            HStack {
+                Text("Cast: \(movie.cast)")
+                
+                Spacer()
+            }
+            
+            HStack {
+                Text("Creators: \(movie.creators)")
+                
+                Spacer()
+            }
+        }
+        .font(.caption)
+        .foregroundColor(.gray)
+        .padding(.vertical, 1)
+    }
+}
+
+struct CurrentEpisodeInformation: View {
+    var movie: Movie
+    
+    var body: some View {
+        Group {
+            HStack {
+                Text(movie.episodeInfoDispalayed)
+                    .bold()
+                
+                Spacer()
+            }
+            .padding(.vertical, 4)
+            
+            HStack {
+                Text(movie.episodeDescriptionDisplayed)
+                    .font(.subheadline)
+                
+                Spacer()
+            }
+        }
     }
 }
