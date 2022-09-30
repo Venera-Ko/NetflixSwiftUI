@@ -1,5 +1,5 @@
 import SwiftUI
-import KingfisherSwiftUI
+import Kingfisher
 
 struct StandardHomeMovie: View {
     var movie: Movie
