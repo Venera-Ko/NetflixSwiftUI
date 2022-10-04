@@ -8,6 +8,36 @@
 
 import SwiftUI
 
+let exampleVideoURL = URL(string: "https://youtu.be/aVMkvCTT_yg")!
+
+
+
+let exampleImageURL = URL(string: "https://i.ytimg.com/vi/aVMkvCTT_yg/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBVMZd17u9W0Yb3aRP9Ahw2Bttx4A")!
+
+let exampleImageURL1 = URL(string: "https://i.ytimg.com/vi/MW8RKweDoaE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCwSDa29Kt4Cd_n_K3XmTxjRRkdyg")!
+
+let exampleImageURL2 = URL(string: "https://i.ytimg.com/vi/EGcXF0iG-2s/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAhjCOek0FKlo-JuHhY3KKjU8svDg")!
+
+
+let exampleTrailerURL =  URL(string: "https://youtu.be/L3pk_TBkihU")!
+let exampleTrailerURL1 =  URL(string: "https://youtu.be/uTmBeR32GRA")!
+let exampleTrailerURL2 =  URL(string: "https://youtu.be/YF1eYbfbH5k")!
+
+//var randomExampleImageURL: URL {
+//    [exampleImageURL, exampleImageURL1, exampleImageURL2].randomElement() ?? exampleImageURL
+//}
+
+let exampleTrailer = Trailer(name: "Trailer", videoURL: exampleTrailerURL, thumbnailImageURL: exampleImageURL)
+
+let exampleTrailer1 = Trailer(name: "The Mysterious", videoURL: exampleTrailerURL1, thumbnailImageURL: exampleImageURL1)
+
+let exampleTrailer2 = Trailer(name: "WaterTower", videoURL: exampleTrailerURL2, thumbnailImageURL: exampleImageURL2)
+
+
+let exampleTrailers = [exampleTrailer, exampleTrailer1, exampleTrailer2]
+
+
+
 let movieExample = Movie(
     id: UUID().uuidString,
     name: "What We Do In The Shadows",
@@ -19,7 +49,9 @@ let movieExample = Movie(
     defaulfEpisodeInfo: exampleEpisodeInfo,
     creators: "Taika Waititi, Jemaine Clement",
     cast: "Kayvan Novak, Matt Berry, Natasia Demetriou",
-    promoHeadline: "Watch Season 4 Now"
+    moreLikeThisMovies: moviesExamples,
+    promoHeadline: "Watch Season 4 Now",
+    trailers: exampleTrailers
 )
 
 let movieExample1 = Movie(
@@ -33,7 +65,9 @@ let movieExample1 = Movie(
     defaulfEpisodeInfo: exampleEpisodeInfo,
     creators: "Taika Waititi, Jemaine Clement",
     cast: "Kayvan Novak, Matt Berry, Natasia Demetriou",
-    promoHeadline: "Watch Season 2 Now")
+    moreLikeThisMovies: [], promoHeadline: "Watch Season 2 Now",
+    trailers: exampleTrailers
+)
 
 let movieExample2 = Movie(
     id: UUID().uuidString,
@@ -45,7 +79,10 @@ let movieExample2 = Movie(
     numberOfSeasons: 1,
     defaulfEpisodeInfo: exampleEpisodeInfo,
     creators: "Taika Waititi, Jemaine Clement",
-    cast: "Kayvan Novak, Matt Berry, Natasia Demetriou")
+    cast: "Kayvan Novak, Matt Berry, Natasia Demetriou",
+    moreLikeThisMovies: [],
+    trailers: exampleTrailers
+)
 
 let movieExample3 = Movie(
     id: UUID().uuidString,
@@ -56,7 +93,10 @@ let movieExample3 = Movie(
     rating: "TV-MA",
     defaulfEpisodeInfo: exampleEpisodeInfo,
     creators: "Taika Waititi, Jemaine Clement",
-    cast: "Kayvan Novak, Matt Berry, Natasia Demetriou")
+    cast: "Kayvan Novak, Matt Berry, Natasia Demetriou",
+    moreLikeThisMovies: [],
+    trailers: exampleTrailers
+)
 
 let movieExample4 = Movie(
     id: UUID().uuidString,
@@ -67,7 +107,10 @@ let movieExample4 = Movie(
     rating: "TV-MA",
     defaulfEpisodeInfo: exampleEpisodeInfo,
     creators: "Taika Waititi, Jemaine Clement",
-    cast: "Kayvan Novak, Matt Berry, Natasia Demetriou")
+    cast: "Kayvan Novak, Matt Berry, Natasia Demetriou",
+    moreLikeThisMovies: [],
+    trailers: exampleTrailers
+)
 
 let movieExample5 = Movie(
     id: UUID().uuidString,
@@ -79,13 +122,29 @@ let movieExample5 = Movie(
     numberOfSeasons: 1,
     defaulfEpisodeInfo: exampleEpisodeInfo,
     creators: "Taika Waititi, Jemaine Clement",
-    cast: "Kayvan Novak, Matt Berry, Natasia Demetriou")
+    cast: "Kayvan Novak, Matt Berry, Natasia Demetriou",
+    moreLikeThisMovies: [],
+    trailers: exampleTrailers
+)
+
+let movieExample6 = Movie(
+    id: UUID().uuidString,
+    name: "Tenet",
+    thumbnailURL: URL(string: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.traileraddict.com%2Fcontent%2Fwarner-bros-pictures%2Ftenet-poster.jpg&f=1&nofb=1&ipt=188d332a8011fc9e82592a34a7c46c0f0aae7cfc073598ed1bc06e9cef80825d&ipo=images")!,
+    categories: ["Action", "Sci-Fi", "Thriller"],
+    year: 2021, rating: "TV-MA",
+    defaulfEpisodeInfo: exampleEpisodeInfo,
+    creators: "Christopher Nolan, Emma Thomas",
+    cast: "Robert Pattinson, John David Washington, Elizabeth Debicki",
+    moreLikeThisMovies: [],
+    trailers: exampleTrailers)
 
 
 
 
-let moviesExamples: [Movie] = [movieExample, movieExample1, movieExample2, movieExample3, movieExample4, movieExample5]
-
+var moviesExamples: [Movie] {
+    [movieExample6, movieExample1, movieExample2, movieExample3, movieExample4, movieExample5].shuffled()
+}
 
 let exampleEpisodeInfo = CurrentEpisodeInfo(episodeName: "The Trial", description: "The vampires must defend themselves as an international vampire tribunal gathers to judge them for their transgressions.", season: 1, episode: 7)
 

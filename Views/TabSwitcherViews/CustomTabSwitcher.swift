@@ -12,6 +12,7 @@ struct CustomTabSwitcher: View {
     @State private var currentTab: CustomTab = .episodes
     
     var tabs: [CustomTab]
+    var movie: Movie
     
     func widthForTab(_ tab: CustomTab) -> CGFloat {
         let string = tab.rawValue
@@ -51,29 +52,29 @@ struct CustomTabSwitcher: View {
             case .episodes:
                 Text("EPISODES")
             case .trailers:
-                Text("TRAILERS")
+                TrailerList(trailers: movie.trailers)
             case .more:
-                Text("MORE")
+                MoreLikeThis(movies: movie.moreLikeThisMovies)
             }
         }
         
-            .foregroundColor(.white)
-        }
-    
-    
-    enum CustomTab: String {
-        case episodes = "EPISODES"
-        case trailers = "TRAILERS & MORE"
-        case more = "MORE LIKE THIS"
+        .foregroundColor(.white)
     }
+}
+
+enum CustomTab: String {
+    case episodes = "EPISODES"
+    case trailers = "TRAILERS & MORE"
+    case more = "MORE LIKE THIS"
+    
 }
 
 struct CustomTabSwitcher_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color.black
-                .edgesIgnoringSafeArea(.all)
-            CustomTabSwitcher(tabs: [.episodes, .trailers, .more])
+                .ignoresSafeArea()
+            CustomTabSwitcher(tabs: [.episodes, .trailers, .more], movie: movieExample)
         }
     }
 }
