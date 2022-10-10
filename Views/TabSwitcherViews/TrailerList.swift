@@ -24,7 +24,7 @@ struct TrailerList: View {
                         .font(.headline)
                 }
                 .foregroundColor(.white)
-                .padding(.bottom, 10)
+                .padding(.bottom, 10) 
             }
         }
     }

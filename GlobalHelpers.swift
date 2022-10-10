@@ -38,6 +38,57 @@ let exampleTrailers = [exampleTrailer, exampleTrailer1, exampleTrailer2]
 
 
 
+let episode = Episode(name: "Reunited",
+                      season: 4,
+                      episodeNumber: 1,
+                      thumbnailImageURLString: "https://i.kinja-img.com/gawker-media/image/upload/t_original/xoydv7itzeysa84u17rl.jpg",
+                      description: "The vampires return from their world travels to find their mansion on the verge of collapse, and a freakish new creature in the house.",
+                      length: 23,
+                      videoURL: URL(string: "https://youtu.be/2RufnSeoOKA")!)
+
+let episode1 = Episode(name: "The Lamp",
+                      season: 4,
+                      episodeNumber: 2,
+                      thumbnailImageURLString: "https://image.tmdb.org/t/p/original/n6GN1ywczfQPX5mT1jM3bAeFBnz.jpg",
+                      description: "Nandor's search for love is finally successful, and Nadja realizes her lifelong ambition of opening a vampire nightclub.",
+                      length: 27,
+                      videoURL: URL(string: "https://youtu.be/x4-IMi96GSE")!)
+
+let episode2 = Episode(name: "The Grand Opening",
+                      season: 4,
+                      episodeNumber: 3,
+                      thumbnailImageURLString: "https://tv-fanatic-res.cloudinary.com/iu/s--21QbJM3z--/t_full/cs_srgb,f_auto,fl_strip_profile.lossy,q_auto:420/v1554951735/standing-ground-what-we-do-in-the-shadows-s1e3.jpg",
+                      description: "Opening night of Nadja's vampire nightclub is threatened when the big musical guest cancels.",
+                      length: 24,
+                      videoURL: URL(string: "https://youtu.be/bAI66Il1Tko")!)
+
+let episode3 = Episode(name: "Reunited",
+                      season: 1,
+                      episodeNumber: 1,
+                      thumbnailImageURLString: "https://i.kinja-img.com/gawker-media/image/upload/t_original/xoydv7itzeysa84u17rl.jpg",
+                      description: "The vampires return from their world travels to find their mansion on the verge of collapse, and a freakish new creature in the house.",
+                      length: 23,
+                      videoURL: URL(string: "https://youtu.be/2RufnSeoOKA")!)
+
+let episode4 = Episode(name: "The Lamp",
+                      season: 2,
+                      episodeNumber: 2,
+                      thumbnailImageURLString: "https://image.tmdb.org/t/p/original/n6GN1ywczfQPX5mT1jM3bAeFBnz.jpg",
+                      description: "Nandor's search for love is finally successful, and Nadja realizes her lifelong ambition of opening a vampire nightclub.",
+                      length: 27,
+                      videoURL: URL(string: "https://youtu.be/x4-IMi96GSE")!)
+
+let episode5 = Episode(name: "The Grand Opening",
+                      season: 3,
+                      episodeNumber: 3,
+                      thumbnailImageURLString: "https://tv-fanatic-res.cloudinary.com/iu/s--21QbJM3z--/t_full/cs_srgb,f_auto,fl_strip_profile.lossy,q_auto:420/v1554951735/standing-ground-what-we-do-in-the-shadows-s1e3.jpg",
+                      description: "Opening night of Nadja's vampire nightclub is threatened when the big musical guest cancels.",
+                      length: 24,
+                      videoURL: URL(string: "https://youtu.be/bAI66Il1Tko")!)
+
+
+var allExamplesEpisodes = [episode, episode1, episode2, episode3, episode4, episode5]
+
 let movieExample = Movie(
     id: UUID().uuidString,
     name: "What We Do In The Shadows",
@@ -50,6 +101,7 @@ let movieExample = Movie(
     creators: "Taika Waititi, Jemaine Clement",
     cast: "Kayvan Novak, Matt Berry, Natasia Demetriou",
     moreLikeThisMovies: moviesExamples,
+    episodes: allExamplesEpisodes,
     promoHeadline: "Watch Season 4 Now",
     trailers: exampleTrailers
 )
