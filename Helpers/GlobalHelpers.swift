@@ -23,9 +23,6 @@ let exampleTrailerURL =  URL(string: "https://youtu.be/L3pk_TBkihU")!
 let exampleTrailerURL1 =  URL(string: "https://youtu.be/uTmBeR32GRA")!
 let exampleTrailerURL2 =  URL(string: "https://youtu.be/YF1eYbfbH5k")!
 
-//var randomExampleImageURL: URL {
-//    [exampleImageURL, exampleImageURL1, exampleImageURL2].randomElement() ?? exampleImageURL
-//}
 
 let exampleTrailer = Trailer(name: "Trailer", videoURL: exampleTrailerURL, thumbnailImageURL: exampleImageURL)
 
@@ -35,7 +32,6 @@ let exampleTrailer2 = Trailer(name: "WaterTower", videoURL: exampleTrailerURL2, 
 
 
 let exampleTrailers = [exampleTrailer, exampleTrailer1, exampleTrailer2]
-
 
 
 let episode = Episode(name: "Reunited",
@@ -100,7 +96,7 @@ let movieExample = Movie(
     defaulfEpisodeInfo: exampleEpisodeInfo,
     creators: "Taika Waititi, Jemaine Clement",
     cast: "Kayvan Novak, Matt Berry, Natasia Demetriou",
-    moreLikeThisMovies: moviesExamples,
+    moreLikeThisMovies: exampleMovies,
     episodes: allExamplesEpisodes,
     promoHeadline: "Watch Season 4 Now",
     trailers: exampleTrailers
@@ -194,7 +190,7 @@ let movieExample6 = Movie(
 
 
 
-var moviesExamples: [Movie] {
+var exampleMovies: [Movie] {
     [movieExample6, movieExample1, movieExample2, movieExample3, movieExample4, movieExample5].shuffled()
 }
 
