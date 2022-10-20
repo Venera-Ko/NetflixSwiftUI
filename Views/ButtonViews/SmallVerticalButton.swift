@@ -13,6 +13,7 @@ struct SmallVerticalButton: View {
     
     var isOffImage: String
     var isOnImage: String
+    var color: Color = Color.white
     
     var isOn: Bool
     
@@ -35,10 +36,10 @@ struct SmallVerticalButton: View {
         }, label: {
             VStack {
                 Image(systemName: imageName)
-                    .foregroundColor(.white)
+                    .foregroundColor(color)
                 
                 Text(text)
-                    .foregroundColor(.white)
+                    .foregroundColor(color)
                     .font(.system(size: 14))
                     .bold()
             }

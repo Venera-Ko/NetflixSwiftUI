@@ -19,9 +19,14 @@ let exampleImageURL1 = URL(string: "https://i.ytimg.com/vi/MW8RKweDoaE/hq720.jpg
 let exampleImageURL2 = URL(string: "https://i.ytimg.com/vi/EGcXF0iG-2s/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAhjCOek0FKlo-JuHhY3KKjU8svDg")!
 
 
-let exampleTrailerURL =  URL(string: "https://youtu.be/L3pk_TBkihU")!
-let exampleTrailerURL1 =  URL(string: "https://youtu.be/uTmBeR32GRA")!
-let exampleTrailerURL2 =  URL(string: "https://youtu.be/YF1eYbfbH5k")!
+//let exampleTrailerURL =  URL(string: "https://youtu.be/L3pk_TBkihU")!
+//let exampleTrailerURL1 =  URL(string: "https://youtu.be/uTmBeR32GRA")!
+//let exampleTrailerURL2 =  URL(string: "https://youtu.be/YF1eYbfbH5k")!
+//let exampleTrailerURL =  URL(string: "https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4")!
+let exampleTrailerURL =  URL(string: "https://assets.mixkit.co/videos/preview/mixkit-cheerful-man-moves-forward-dancing-in-the-middle-of-nature-32746-large.mp4")!
+
+let exampleTrailerURL1 =  URL(string: "https://youtu.be/XQu8TTBmGhA")!
+let exampleTrailerURL2 =  URL(string: "https://storage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4")!
 
 
 let exampleTrailer = Trailer(name: "Trailer", videoURL: exampleTrailerURL, thumbnailImageURL: exampleImageURL)
@@ -93,6 +98,7 @@ let movieExample = Movie(
     year: 2019,
     rating: "TV-MA",
     numberOfSeasons: 5,
+    accentColor: Color.green,
     defaulfEpisodeInfo: exampleEpisodeInfo,
     creators: "Taika Waititi, Jemaine Clement",
     cast: "Kayvan Novak, Matt Berry, Natasia Demetriou",

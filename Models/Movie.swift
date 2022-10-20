@@ -5,7 +5,7 @@
 //  Created by V K on 21.09.2022.
 //
 
-import Foundation
+import SwiftUI
 
 struct Movie: Identifiable {
 //    static func == (lhs: Movie, rhs: Movie) -> Bool {
@@ -30,6 +30,8 @@ struct Movie: Identifiable {
     
     //Personalisation
     var currentEpisode: CurrentEpisodeInfo?
+    
+    var accentColor: Color? = .white
     
     var defaulfEpisodeInfo: CurrentEpisodeInfo
     
