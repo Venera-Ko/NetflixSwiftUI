@@ -23,16 +23,16 @@ struct ContentView: View {
                     Text("Home")
                 }.tag(0)
             
-            Text("search")
+            SearchView()
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                     Text("Search")
                 }.tag(1)
             
-            Text("coming soon")
+            ComingSoon()
                 .tabItem {
                     Image(systemName: "play.rectangle")
-                    Text("1")
+                    Text("Coming Soon")
                 }.tag(2)
             
             Text("downloads")

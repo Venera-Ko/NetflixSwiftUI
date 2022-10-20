@@ -19,7 +19,7 @@ func generateMovies(_ count: Int) -> [Movie] {
         let nameLength = Int.random(in: 9..<20),
             name = randomString(length: nameLength)
         
-        let randomThumbnail = Int.random(in: 0...50),
+        let randomThumbnail = Int.random(in: 0...500),
             thumbnail = URL(string: "https://loremflickr.com/300/200/series,netflix/?random=\(randomThumbnail)")!
         
         let year = Int.random(in: 2000...2020)
