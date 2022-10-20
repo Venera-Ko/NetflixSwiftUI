@@ -99,7 +99,8 @@ let movieExample = Movie(
     moreLikeThisMovies: exampleMovies,
     episodes: allExamplesEpisodes,
     promoHeadline: "Watch Season 4 Now",
-    trailers: exampleTrailers
+    trailers: exampleTrailers, previewImageName: "ozarkPreview",
+    previewVideoURL: exampleVideoURL
 )
 
 let movieExample1 = Movie(
@@ -114,7 +115,8 @@ let movieExample1 = Movie(
     creators: "Taika Waititi, Jemaine Clement",
     cast: "Kayvan Novak, Matt Berry, Natasia Demetriou",
     moreLikeThisMovies: [], promoHeadline: "Watch Season 2 Now",
-    trailers: exampleTrailers
+    trailers: exampleTrailers, previewImageName: "ozarkPreview",
+    previewVideoURL: exampleVideoURL
 )
 
 let movieExample2 = Movie(
@@ -129,7 +131,8 @@ let movieExample2 = Movie(
     creators: "Taika Waititi, Jemaine Clement",
     cast: "Kayvan Novak, Matt Berry, Natasia Demetriou",
     moreLikeThisMovies: [],
-    trailers: exampleTrailers
+    trailers: exampleTrailers, previewImageName: "ozarkPreview",
+    previewVideoURL: exampleVideoURL
 )
 
 let movieExample3 = Movie(
@@ -143,7 +146,8 @@ let movieExample3 = Movie(
     creators: "Taika Waititi, Jemaine Clement",
     cast: "Kayvan Novak, Matt Berry, Natasia Demetriou",
     moreLikeThisMovies: [],
-    trailers: exampleTrailers
+    trailers: exampleTrailers, previewImageName: "ozarkPreview",
+    previewVideoURL: exampleVideoURL
 )
 
 let movieExample4 = Movie(
@@ -157,7 +161,8 @@ let movieExample4 = Movie(
     creators: "Taika Waititi, Jemaine Clement",
     cast: "Kayvan Novak, Matt Berry, Natasia Demetriou",
     moreLikeThisMovies: [],
-    trailers: exampleTrailers
+    trailers: exampleTrailers, previewImageName: "ozarkPreview",
+    previewVideoURL: exampleVideoURL
 )
 
 let movieExample5 = Movie(
@@ -172,7 +177,8 @@ let movieExample5 = Movie(
     creators: "Taika Waititi, Jemaine Clement",
     cast: "Kayvan Novak, Matt Berry, Natasia Demetriou",
     moreLikeThisMovies: [],
-    trailers: exampleTrailers
+    trailers: exampleTrailers, previewImageName: "ozarkPreview",
+    previewVideoURL: exampleVideoURL
 )
 
 let movieExample6 = Movie(
@@ -185,7 +191,9 @@ let movieExample6 = Movie(
     creators: "Christopher Nolan, Emma Thomas",
     cast: "Robert Pattinson, John David Washington, Elizabeth Debicki",
     moreLikeThisMovies: [],
-    trailers: exampleTrailers)
+    trailers: exampleTrailers, previewImageName: "ozarkPreview",
+    previewVideoURL: exampleVideoURL
+    )
 
 
 

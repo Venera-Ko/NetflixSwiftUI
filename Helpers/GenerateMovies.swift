@@ -49,7 +49,7 @@ func generateMovies(_ count: Int) -> [Movie] {
         
         let moreLikeThis = exampleMovies
         
-        let movie = Movie(id: id, name: name, thumbnailURL: thumbnail, categories: categories, genre: .AllGenres, year: year, rating: "PG-13", numberOfSeasons: numSeasons, currentEpisode: defaultEpiInfo, defaulfEpisodeInfo: defaultEpiInfo, creators: creators, cast: cast, moreLikeThisMovies: moreLikeThis, episodes: allEpisodes, promoHeadline: headline, trailers: allTrailers)
+        let movie = Movie(id: id, name: name, thumbnailURL: thumbnail, categories: categories, genre: .AllGenres, year: year, rating: "PG-13", numberOfSeasons: numSeasons, currentEpisode: defaultEpiInfo, defaulfEpisodeInfo: defaultEpiInfo, creators: creators, cast: cast, moreLikeThisMovies: moreLikeThis, episodes: allEpisodes, promoHeadline: headline, trailers: allTrailers, previewImageName: "")
         
         allMovies.append(movie)
     }
