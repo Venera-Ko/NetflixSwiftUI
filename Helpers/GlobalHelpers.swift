@@ -205,7 +205,7 @@ let movieExample6 = Movie(
 
 
 var exampleMovies: [Movie] {
-    [movieExample6, movieExample1, movieExample2, movieExample3, movieExample4, movieExample5].shuffled()
+    [movieExample6, movieExample1, movieExample2, movieExample3, movieExample4, movieExample5]
 }
 
 let exampleEpisodeInfo = CurrentEpisodeInfo(episodeName: "The Trial", description: "The vampires must defend themselves as an international vampire tribunal gathers to judge them for their transgressions.", season: 1, episode: 7)
@@ -225,5 +225,18 @@ extension String {
 extension View {
     func hideKeyboard() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}
+
+extension View {
+    ///hides or shows the view based on a boolean value
+    @ViewBuilder func isHidden(_ hidden: Bool, remove: Bool = false) -> some View {
+        if hidden {
+            if !remove {
+                self.hidden()
+            }
+        } else {
+            self
+        }
     }
 }
