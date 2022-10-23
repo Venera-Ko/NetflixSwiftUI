@@ -40,7 +40,7 @@ struct ContentView: View {
                     }
                 }
                 
-                ///vertical draging only
+                ///vertical drag only
                 let shouldBePosition = value.translation.height + self.previewNewPosition
                 
                 if shouldBePosition < 0 {
