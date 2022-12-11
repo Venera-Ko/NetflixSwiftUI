@@ -37,10 +37,10 @@ struct HomeView: View {
                                     previewStartingIndex:
                     $previewStartingIndex)
                     
-                    HomeStack(vm: vm, topRowSelection: topRowSelection, selectedGenre: homeGenre, movieDetailToShow: $movieDetailToShow,
-                              showPreviewFullscreen: $showPreviewFullscreen,
-                              previewStartingIndex:
-                    $previewStartingIndex)
+                    HomeStack(vm: vm, topRowSelection: topRowSelection, selectedGenre: homeGenre, movieDetailToShow: $movieDetailToShow)//,
+//                              showPreviewFullscreen: $showPreviewFullscreen,
+//                              previewStartingIndex:
+//                    $previewStartingIndex)
                 }
             }
             
@@ -55,11 +55,8 @@ struct HomeView: View {
                     Color.black.opacity(0.9)
 
                     VStack(spacing: 40) {
-
                         Spacer()
-
                         ForEach(HomeTopRow.allCases, id: \.self) { topRow in
-
                             Button {
                                 topRowSelection = topRow
                                 showTopRowSelection = false
@@ -73,9 +70,7 @@ struct HomeView: View {
                                 }
                             }
                         }
-
                         Spacer()
-
                         Button {
                             showTopRowSelection = false
                         } label: {
@@ -92,17 +87,12 @@ struct HomeView: View {
         .foregroundColor(.white)
 
         if showGenreSelection {
-            
             Group {
                 Color.black.opacity(0.9)
-
                 VStack(spacing: 40) {
-
                     Spacer()
-
                     ScrollView {
                         ForEach(vm.allGenres, id: \.self) { genre in
-
                             Button {
                                 homeGenre = genre
                                 showGenreSelection = false
@@ -118,9 +108,7 @@ struct HomeView: View {
                             .padding(.bottom, 40)
                         }
                     }
-
                     Spacer()
-
                     Button {
                         showGenreSelection = false
                     } label: {

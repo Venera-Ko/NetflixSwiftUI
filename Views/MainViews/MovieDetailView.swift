@@ -26,7 +26,6 @@ struct MovieDetailView: View {
                 VStack {
                     HStack {
                         Spacer()
-                        
                         Button {
                             movieDetailToShow = nil
                         } label: {

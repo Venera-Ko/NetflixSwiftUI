@@ -15,8 +15,8 @@ struct HomeStack: View {
     
     @Binding var movieDetailToShow: Movie?
     
-    @Binding var showPreviewFullscreen: Bool
-    @Binding var previewStartingIndex: Int
+//    @Binding var showPreviewFullscreen: Bool
+//    @Binding var previewStartingIndex: Int
     
     var body: some View {
         ForEach(vm.allCategories, id: \.self) { category in
@@ -46,16 +46,16 @@ struct HomeStack: View {
     }
 }
 
-struct HomeStack_Previews: PreviewProvider {
-    static var previews: some View {
-        ZStack {
-            Color.black
-                .ignoresSafeArea()
-            ScrollView {
-                HomeStack(vm: HomeVM(), topRowSelection: .movies, selectedGenre: .AllGenres, movieDetailToShow: .constant(nil), showPreviewFullscreen: .constant(false),
-                          previewStartingIndex: .constant(0))
-            }
-        }
-        .foregroundColor(.white)
-    }
-}
+//struct HomeStack_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ZStack {
+//            Color.black
+//                .ignoresSafeArea()
+//            ScrollView {
+//                HomeStack(vm: HomeVM(), topRowSelection: .movies, selectedGenre: .AllGenres, movieDetailToShow: .constant(nil), showPreviewFullscreen: .constant(false),
+//                          previewStartingIndex: .constant(0))
+//            }
+//        }
+//        .foregroundColor(.white)
+//    }
+//}

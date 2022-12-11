@@ -50,7 +50,6 @@ struct ComingSoon: View {
                         LazyVStack {
                             NotificationBar(showNotificationList: $showNotificationList)
                             
-                            
                             ForEach(Array(movies), id: \.offset) { index, movie in
                                 ComingSoonRow(movie: movie, movieDetailToShow: $movieDetailToShow)
                                     .frame(height: 400)

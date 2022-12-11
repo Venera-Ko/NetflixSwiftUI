@@ -7,29 +7,33 @@
 
 import SwiftUI
 
+
+
 struct DownloadView: View {
     var body: some View {
+        
         ZStack {
             Color.black
-            ignoresSafeArea()
+                .ignoresSafeArea()
+            
             
             VStack {
                 HStack {
                     Image(systemName: "info.circle")
+                    
                     Text("Smart Downloads")
                     Text("ON")
                         .foregroundColor(.blue)
-                    
                     Spacer()
                 }
                 .padding()
                 .font(.system(size: 18, weight: .bold))
+                .foregroundColor(.gray)
                 
                 ZStack {
                     Circle()
                         .foregroundColor(.graySearchBackground)
                         .padding(.horizontal, 100)
-                    
                     Image(systemName: "arrow.down.to.line.alt")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
@@ -47,8 +51,6 @@ struct DownloadView: View {
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 50)
                         .font(.system(size: 16))
-                    
-                    
                     Button {
                         //
                     } label: {
@@ -57,23 +59,19 @@ struct DownloadView: View {
                             .padding()
                             .background(Color.white)
                     }
-
+                    Spacer()
                 }
-                
-                Spacer()
+                .foregroundColor(.white)
             }
-            .foregroundColor(.white)
+            
         }
     }
 }
 
 struct DownloadView_Previews: PreviewProvider {
     static var previews: some View {
-        ZStack {
-            Color.black
-                .ignoresSafeArea()
         
         DownloadView()
-    }
+        
     }
 }
