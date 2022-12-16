@@ -1,4 +1,4 @@
-# Learning SwiftUI with this Netflix clone project.
+# SwiftUI 
 
  
 <p>
